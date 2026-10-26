@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Entrar • Doce Encanto</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="login-page">
+<main class="login-shell">
+    <section class="login-showcase">
+        <div class="login-showcase-copy">
+            <span class="login-kicker">CONFEITARIA AFETIVA</span>
+            <h1>Do forno ao evento,<br>cada fatia importa.</h1>
+            <p>Custos claros, produção organizada e resultados mais doces para o seu negócio.</p>
+        </div>
+        <div class="login-photo" role="img" aria-label="Bolos e fatias da Doce Encanto"></div>
+        <span class="login-caption">Feito com afeto. Gerido com inteligência.</span>
+    </section>
+    <section class="login-panel">
+        <div class="login-card">
+            <img class="login-logo" src="/images/logo-doce-encanto.png" alt="Logo Doce Encanto">
+            <div class="login-heading">
+                <p class="eyebrow">BEM-VINDA AO SEU ATELIÊ</p>
+                <h2>Acesse sua gestão</h2>
+                <p>Entre para acompanhar receitas, custos e eventos.</p>
+            </div>
+            <div class="login-alert error" th:if="${param.error}">Usuário ou senha incorretos. Confira os dados e tente novamente.</div>
+            <div class="login-alert success" th:if="${param.logout}">Você saiu com segurança. Até logo!</div>
+            <form th:action="@{/login}" method="post" class="login-form">
+                <label for="username">Usuário<span class="login-input-wrap"><span class="login-input-icon" aria-hidden="true">♙</span><input id="username" name="username" type="text" autocomplete="username" placeholder="Digite seu usuário" autofocus required></span></label>
+                <label for="password">Senha<span class="login-input-wrap"><span class="login-input-icon" aria-hidden="true">◇</span><input id="password" name="password" type="password" autocomplete="current-password" placeholder="Digite sua senha" required></span></label>
+                <button type="submit" class="login-submit">Entrar no ateliê <span aria-hidden="true">→</span></button>
+            </form>
+            <p class="login-help">Acesso exclusivo para a gestão da Doce Encanto.</p>
+        </div>
+    </section>
+</main>
+</body>
+</html>

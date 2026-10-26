@@ -1,0 +1,4 @@
+Compilação e empacotamento Maven: BUILD SUCCESS.
+4 testes executados; 0 falhas; 0 erros.
+Validados cálculos de margem, investimento, lucro previsto/real com sobras, estoque, encerramento, renderização das telas autenticadas, login e proteção CSRF.
+Dockerfile fornecido; imagem Docker não executada neste ambiente.
